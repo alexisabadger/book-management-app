@@ -19,7 +19,7 @@ mongoose.connect("mongodb+srv://cs157:cs157@cs157.edmri.mongodb.net/myFirstDatab
       }
    }
 );
-
+// nothing to see here
 
 const empSchema = new mongoose.Schema({
   name: {
@@ -120,4 +120,4 @@ app.delete("/api/employees", (req, res) => {
   })
 });
 
-app.listen(3000, () => console.log("server started"));
+app.listen(process.env.PORT || 5000, () => console.log("server started"));
