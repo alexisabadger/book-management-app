@@ -80,6 +80,10 @@ body {
     display: inline-block;
     text-decoration: none;
     outline: none !important;
+    width: 50px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   table.table td a:hover {
     color: #2196f3;
