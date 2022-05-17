@@ -55,7 +55,7 @@ $(document).ready(function() {
     // Delete all employees
     $("#deleteAllEmployees").on("click", function() {
       $.ajax({
-        url: "http://localhost:3000/api/employees",
+        url: "https://alexmcintire.herokuapp.com/api/employees",
         type: "DELETE",
         success: function(result) {
           getEmployeeList();
@@ -69,7 +69,7 @@ $(document).ready(function() {
     // New Employee AJAX
     function addEmployee(empData) {
       $.ajax({
-        url: "http://localhost:3000/api/employees",
+        url: "https://alexmcintire.herokuapp.com/api/employees",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(empData),
@@ -93,7 +93,7 @@ $(document).ready(function() {
     // Update Employee AJAX
     function updateEmployee(empID, empData) {
       $.ajax({
-        url: "http://localhost:3000/api/employees/" + empID,
+        url: "https://alexmcintire.herokuapp.com/api/employees/" + empID,
         type: "PUT",
         contentType: "application/json",
         data: JSON.stringify(empData),
@@ -139,7 +139,7 @@ $(document).ready(function() {
       var html = "";
   
       $.ajax({
-        url: "http://localhost:3000/api/employees",
+        url: "https://alexmcintire.herokuapp.com/api/employees",
         type: "GET",
         success: function(result) {
           $("#tableBody").empty();
@@ -186,7 +186,7 @@ $(document).ready(function() {
     // Edit Employee AJAX
     function editEmployee(empID) {
       $.ajax({
-        url: "http://localhost:3000/api/employees/" + empID,
+        url: "https://alexmcintire.herokuapp.com/api/employees/" + empID,
         type: "GET",
         success: function(result) {
           if (result) {
